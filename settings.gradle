@@ -6,5 +6,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "ThreadPoolExperiment"
-include ':app'
+rootProject.name = "ThreadPoolExperiments"
+include ':app1'
