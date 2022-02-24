@@ -7,19 +7,13 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Tap the buttons below to execute a Runnable on the named Executor." />
-
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="start"
         android:padding="8dp"
-        android:text="Execute tasks with ThreadPoolExecutor"
+        android:text="Schedule tasks to run in single thread executor"
         android:textAllCaps="false" />
 
     <Button
@@ -28,14 +22,20 @@
         android:layout_height="wrap_content"
         android:gravity="start"
         android:padding="8dp"
-        android:text="Execute tasks with plain Threads"
+        android:text="Schedule tasks to run in plain threads"
         android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ready to process tasks. Tap one of the buttons above." />
 
     <androidx.constraintlayout.helper.widget.Flow
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:constraint_referenced_ids="textView,button1,button2"
+        app:constraint_referenced_ids="button1,button2,textView"
         app:flow_horizontalAlign="start"
         app:flow_verticalGap="8dp"
         app:layout_constraintEnd_toEndOf="parent"
