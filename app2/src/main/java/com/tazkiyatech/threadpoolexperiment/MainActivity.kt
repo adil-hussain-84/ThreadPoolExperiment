@@ -36,12 +36,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun executeTasksInSingleThreadExecutor() {
         if (tasksInProgress) {
-            Toast.makeText(this, "Error: Tasks already in progress", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Error: Tasks already in progress.", Toast.LENGTH_SHORT).show()
             return
         }
 
-        val sizeOfEachTask = getSizeOfEachTask() ?: return
-        val totalNumberOfTasksToExecute = getTotalNumberOfTasksToExecute() ?: return
+        val sizeOfEachTask = getSizeOfEachTask() ?: run {
+            Toast.makeText(this, "Error: Please enter the size of each task.", Toast.LENGTH_SHORT).show()
+            return
+        }
+
+        val totalNumberOfTasksToExecute = getTotalNumberOfTasksToExecute() ?: run {
+            Toast.makeText(this, "Error: Please enter the total number of tasks to execute.", Toast.LENGTH_SHORT).show()
+            return
+        }
 
         tasksInProgress = true
         currentTaskCount = 0
@@ -58,14 +65,19 @@ class MainActivity : AppCompatActivity() {
 
     private fun executeTasksInPlainOldSynchronizedThreads() {
         if (tasksInProgress) {
-            Toast.makeText(this, "Error: Tasks already in progress", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "Error: Tasks already in progress.", Toast.LENGTH_SHORT).show()
             return
         }
 
-        val sizeOfEachTask = getSizeOfEachTask() ?: return
-        val totalNumberOfTasksToExecute = getTotalNumberOfTasksToExecute() ?: return
+        val sizeOfEachTask = getSizeOfEachTask() ?: run {
+            Toast.makeText(this, "Error: Please enter the size of each task.", Toast.LENGTH_SHORT).show()
+            return
+        }
 
-        updateTextInTextView("Executing tasks...")
+        val totalNumberOfTasksToExecute = getTotalNumberOfTasksToExecute() ?: run {
+            Toast.makeText(this, "Error: Please enter the total number of tasks to execute.", Toast.LENGTH_SHORT).show()
+            return
+        }
 
         tasksInProgress = true
         currentTaskCount = 0
