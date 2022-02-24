@@ -7,13 +7,51 @@
     android:padding="16dp"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/totalTasksToScheduleTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total number of tasks to execute:" />
+
+    <EditText
+        android:id="@+id/totalTasksToExecuteEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter a positive number"
+        android:inputType="number"
+        android:text="100" />
+
+    <Space
+        android:id="@+id/space1"
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
+    <TextView
+        android:id="@+id/sizeOfEachTaskTitleTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Size of each task (this is the input 'n' to pass into the factorial function):" />
+
+    <EditText
+        android:id="@+id/sizeOfEachTaskEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter a positive number"
+        android:inputType="number"
+        android:text="100" />
+
+    <Space
+        android:id="@+id/space2"
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
     <Button
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="start"
         android:padding="8dp"
-        android:text="Schedule tasks to run in single thread executor"
+        android:text="Execute tasks in single thread executor"
         android:textAllCaps="false" />
 
     <Button
@@ -22,11 +60,16 @@
         android:layout_height="wrap_content"
         android:gravity="start"
         android:padding="8dp"
-        android:text="Schedule tasks to run in plain threads"
+        android:text="Execute tasks in plain old synchronized threads"
         android:textAllCaps="false" />
 
+    <Space
+        android:id="@+id/space3"
+        android:layout_width="match_parent"
+        android:layout_height="16dp" />
+
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/statusTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Ready to process tasks. Tap one of the buttons above." />
@@ -35,9 +78,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:constraint_referenced_ids="button1,button2,textView"
+        app:constraint_referenced_ids="totalTasksToScheduleTitleTextView,totalTasksToExecuteEditText,space1,sizeOfEachTaskTitleTextView,sizeOfEachTaskEditText,space2,button1,button2,space3,statusTextView"
         app:flow_horizontalAlign="start"
-        app:flow_verticalGap="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
