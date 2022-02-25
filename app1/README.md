@@ -8,4 +8,4 @@ constructor.
 When you run the app, you will see an interface as below. The text in the interface describes the purposes of
 app and the function of each of the buttons.
 
-![Screenshot of app](Screenshot.png)
+<img src="Screenshot.png" width="50%" alt="Screenshot of app">
