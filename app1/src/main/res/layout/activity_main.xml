@@ -11,7 +11,9 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tap the buttons below to execute a Runnable on the named Executor." />
+        android:justificationMode="inter_word"
+        android:text="This Activity houses four different Executors. Each button below corresponds to one of the Executors. Tap any of the buttons below to execute a Runnable on the named Executor. The Runnables are hardcoded to run for three seconds and to hold their host Thread up for this time. Tap the same button multiple times in quick succession and observe Logcat to see how the creation and re-use of Threads matches up to the parameters passed into the ThreadPoolExecutor constructor."
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
 
     <Button
         android:id="@+id/button1"
