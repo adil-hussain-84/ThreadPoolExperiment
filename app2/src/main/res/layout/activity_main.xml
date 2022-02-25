@@ -51,19 +51,17 @@
         android:id="@+id/button1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="start"
-        android:padding="8dp"
-        android:text="Execute tasks in single thread executor"
-        android:textAllCaps="false" />
+        android:text="Execute Tasks In\nSingle Thread Executor"
+        android:textAllCaps="false"
+        android:textSize="16sp" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="start"
-        android:padding="8dp"
-        android:text="Execute tasks in plain old synchronized threads"
-        android:textAllCaps="false" />
+        android:text="Execute Tasks In\nSynchronized Threads"
+        android:textAllCaps="false"
+        android:textSize="16sp" />
 
     <Space
         android:id="@+id/space3"
