@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.os.SystemClock
 import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import java.util.concurrent.*
 
@@ -28,10 +29,19 @@ class MainActivity : AppCompatActivity() {
         executor3 = Executors.newFixedThreadPool(3)
         executor4 = Executors.newCachedThreadPool()
 
-        findViewById<View>(R.id.button1).setOnClickListener { executor1.execute(createRunnable()) }
-        findViewById<View>(R.id.button2).setOnClickListener { executor2.execute(createRunnable()) }
-        findViewById<View>(R.id.button3).setOnClickListener { executor3.execute(createRunnable()) }
-        findViewById<View>(R.id.button4).setOnClickListener { executor4.execute(createRunnable()) }
+        findViewById<View>(R.id.button1).setOnClickListener { executeRunnableIn(executor1) }
+        findViewById<View>(R.id.button2).setOnClickListener { executeRunnableIn(executor2) }
+        findViewById<View>(R.id.button3).setOnClickListener { executeRunnableIn(executor3) }
+        findViewById<View>(R.id.button4).setOnClickListener { executeRunnableIn(executor4) }
+    }
+
+    private fun executeRunnableIn(executor: Executor) {
+        try {
+            executor.execute(createRunnable())
+        } catch (e: RejectedExecutionException) {
+            Log.e("MainActivity", "${e.message}")
+            Toast.makeText(this, "Rejected execution. See Logcat for details.", Toast.LENGTH_SHORT).show()
+        }
     }
 
     private fun createRunnable(): Runnable {
