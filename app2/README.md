@@ -8,4 +8,4 @@ keyword as a means of achieving a sequential queue.
 When you run the app, you will see an interface as below. The text in the interface describes the purpose of
 the app and the function of each of the buttons.
 
-<img src="Screenshot.png" width="50%" alt="Screenshot of app">
+<img src="Screenshot.png" width="40%" alt="Screenshot of app">
