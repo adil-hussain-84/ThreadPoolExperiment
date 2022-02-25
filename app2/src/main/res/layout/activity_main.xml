@@ -11,7 +11,8 @@
         android:id="@+id/totalTasksToScheduleTitleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Total number of tasks to execute:" />
+        android:text="Total number of tasks to execute:"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
 
     <EditText
         android:id="@+id/totalTasksToExecuteEditText"
@@ -30,7 +31,8 @@
         android:id="@+id/sizeOfEachTaskTitleTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Size of each task (this is the input 'n' to pass into the factorial function):" />
+        android:text="Size of each task (this is the input 'n' to pass into the factorial function):"
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body2" />
 
     <EditText
         android:id="@+id/sizeOfEachTaskEditText"
@@ -72,7 +74,8 @@
         android:id="@+id/statusTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ready to process tasks. Tap one of the buttons above." />
+        android:text="Ready to process tasks. Tap one of the buttons above."
+        android:textAppearance="@style/TextAppearance.MaterialComponents.Body1" />
 
     <androidx.constraintlayout.helper.widget.Flow
         android:layout_width="0dp"
