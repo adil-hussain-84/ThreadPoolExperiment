@@ -8,5 +8,6 @@ The applications in this project are as follows:
 
 * [app1](app1) – An analysis of the `corePoolSize`, `maximumPoolSize`, `keepAliveTime` and `workQueue`
   parameters available in the `ThreadPoolExecutor` constructor.
-* [app2](app2) – A performance comparison of using the `ThreadPoolExecutor` class and the `synchronized`
+* [app2](app2) – A performance comparison of using the `ThreadPoolExecutor` class versus the `synchronized`
   keyword as a means of achieving a sequential queue.
+  
