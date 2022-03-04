@@ -15,8 +15,9 @@ as opposed to spawning a separate thread for each execution.
 
 ## Executing the factorial function repeatedly in Single Thread Executor
 
-The table below shows the total execution time when the factorial function is run repeatedly in a Single
-Thread Executor.
+The table below shows the total execution time when the factorial function is run repeatedly in
+a [Single Thread Executor](https://developer.android.com/reference/java/util/concurrent/Executors#newSingleThreadExecutor())
+.
 
 <table>
     <tr>
@@ -79,7 +80,7 @@ thread. The threads are `synchronized` so that only one is running at any given 
 
 ## Conclusion
 
-My takeaway from this app is that the difference in using the
+My takeaway from this app is that the difference between using the
 [ThreadPoolExecutor](https://developer.android.com/reference/java/util/concurrent/ThreadPoolExecutor)
 class and the [synchronized](https://docs.oracle.com/javase/tutorial/essential/concurrency/syncmeth.html)
 keyword for queuing tasks in an Android application is quite inconsequential in terms of execution time. The
