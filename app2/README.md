@@ -13,7 +13,7 @@ as opposed to spawning a separate thread for each execution.
 
 <img src="Screenshot.png" width="40%" alt="Screenshot of app">
 
-## Executing the factorial function repeatedly in Single Thread Executor
+## Executing the factorial function repeatedly in a Single Thread Executor
 
 The table below shows the total execution time when the factorial function is run repeatedly in
 a [Single Thread Executor](https://developer.android.com/reference/java/util/concurrent/Executors#newSingleThreadExecutor())
@@ -46,10 +46,10 @@ a [Single Thread Executor](https://developer.android.com/reference/java/util/con
     </tr>
 </table>
 
-## Spawning a new Thread for each execution of the factorial function
+## Spawning a new thread for each execution of the factorial function
 
-The table below shows the total execution time when the factorial function is run repeatedly in a separate
-thread. The threads are `synchronized` so that only one is running at any given time.
+The table below shows the total execution time when a new thread is spawned for each execution of the
+factorial function. The threads are `synchronized` so that only one is running at any given time.
 
 <table>
     <tr>
@@ -86,5 +86,5 @@ class and the [synchronized](https://docs.oracle.com/javase/tutorial/essential/c
 keyword for queuing tasks in an Android application is quite inconsequential in terms of execution time. The
 total execution time is lower in
 the [ThreadPoolExecutor](https://developer.android.com/reference/java/util/concurrent/ThreadPoolExecutor) when
-the size of the task is large and/or when the number of tasks scheduled is large but the difference in
+the size of the tasks is large and/or when the number of tasks scheduled is large but the difference in
 execution time is not as large as one might imagine.
