@@ -86,4 +86,4 @@ and an unbounded thread pool for concurrent task execution in an Android applica
 in terms of execution time. The total execution time is almost identical in the unbounded thread pool as it is
 in
 the [Fixed Thread Pool](https://developer.android.com/reference/java/util/concurrent/Executors#newFixedThreadPool(int))
-regardless of the size of the task and regardless of the number of tasks running concurrently.
+regardless of the size of the tasks being executed and regardless of the number of tasks being executed.
